@@ -39,7 +39,7 @@ describe 'BookInStock' do
     it 'should be defined' do
       expect(BookInStock.new('isbn1', 10)).to respond_to(:price_as_string)
     end
-    it 'should display 33.95 as "$33.95" [10 points]', points: 10 do
+    it 'should display 33.95 as $33.95 [10 points]', points: 10 do
       expect(BookInStock.new('isbn11', 33.95).price_as_string).to eq('$33.95')
     end
     it 'should display 1.1 as $1.10 [10 points]', points: 10 do
